@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.header{
+    width: 80%;
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.colors{
+    margin-top: 60px;
+    width: 400px;
+    height: 250px;
+    gap: 50px;
+    border: 1px solid black;
+}
+.color{
+    height: 200px;
+    background-color: black;
+}
