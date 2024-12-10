@@ -13,34 +13,51 @@ let four = document.querySelector('.four')
 let faive = document.querySelector('.faive')
 let six = document.querySelector('.six')
 
-let colors1 = document.querySelector('.colors1');
-
+let colors1 = document.querySelector('.one');
+let colors2 = document.querySelector('.tow')
 
 
 // RGB qiymatlarini boshlang'ich qiymatlari
-let greenValue = 0; // Yashil (G)
-let blueValue = 0; // Ko'k (B)
-let incrementStep = 5; // Oshish qadami
+let green = 0; // Yashil (G)
+let blue = 0; // Ko'k (B)
+let Step = 5; // Oshish qadami
+let red = 0
 
 
 // Rangni oshirish funksiyasi
 colors1.addEventListener('click', () => {
-    if (blueValue < 255) {
+    if (blue < 255) {
         // Agar ko'k qiymati 255 dan kichik bo'lsa, uni oshirish
-        blueValue += incrementStep;
-    } else if (greenValue < 255) {
+        blue += Step;
+    } else if (green < 255) {
         // Agar ko'k qiymati 255 bo'lsa va yashil qiymati 255 dan kichik bo'lsa
-        blueValue = 0; // Ko'kni qayta 0 ga tushirish
-        greenValue += incrementStep; // Yashilni oshirish
+        blue = 0; // Ko'kni qayta 0 ga tushirish
+        green += Step; // Yashilni oshirish
     } else {
         // Agar ikkalasi ham 255 ga to'lgan bo'lsa
-        greenValue = 0; // Yashilni qayta 0 ga tushirish
-        blueValue = 0; // Ko'kni qayta 0 ga tushirish
-        incrementStep += 5; // Qadamni oshirish
+        green = 0; // Yashilni qayta 0 ga tushirish
+        blue = 0; // Ko'kni qayta 0 ga tushirish
+        Step += 5; // Qadamni oshirish
     }
 
     // Rangni yangilash va RGB qiymatini ko'rsatish
-    one.style.backgroundColor = `rgb(0, ${greenValue}, ${blueValue})`;
-    one_rgb.textContent = `rgb(0, ${greenValue}, ${blueValue})`;
+    one.style.backgroundColor = `rgb(0, ${green}, ${blue})`;
+    one_rgb.textContent = `rgb(0, ${green}, ${blue})`;
+});
+colors2.addEventListener('click', () => {
+    if (blue < 255 > red) {
+        
+        // Agar ko'k qiymati 255 dan kichik bo'lsa, uni oshirish
+        blue += Step;
+        red += Step
+    }else {
+        // Agar ikkalasi ham 255 ga to'lgan bo'lsa
+        red = 0; // red qayta 0 ga tushirish
+        blue = 0; // Ko'kni qayta 0 ga tushirish
+    }
+
+    // Rangni yangilash va RGB qiymatini ko'rsatish
+    tow.style.backgroundColor = `rgb(${red}, 0, ${blue})`;
+    tow_rgb.textContent = `rgb( ${red},0, ${blue})`;
 });
 
